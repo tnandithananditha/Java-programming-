@@ -1,0 +1,37 @@
+import java.util.*;
+
+public class QueueExample {
+
+    public static void main(String[] args) {
+
+        Queue<String> queue = new LinkedList<>();
+
+        
+
+        queue.add("Element 1");
+
+        queue.add("Element 2");
+
+        queue.add("Element 3");
+
+        queue.add("Element 4");
+
+        queue.add("Element 5");
+
+        
+
+        System.out.println("Queue: " + queue);
+
+        
+
+        String removedElement = queue.remove();
+
+        System.out.println("Removed Element: " + removedElement);
+
+        
+
+        System.out.println("Updated Queue: " + queue);
+
+    }
+
+}
