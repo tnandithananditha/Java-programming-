@@ -1,0 +1,45 @@
+class A {  
+
+    void msg() {
+
+        System.out.println("Hello");
+
+    }  
+
+}  
+
+class B {  
+
+    void msg() {
+
+        System.out.println("Welcome");
+
+    }  
+
+}  
+
+class C extends A { // C extends A, as multiple inheritance is not supported in Java
+
+    B b = new B(); // creating an object of class B
+
+    
+
+    void msg() {
+
+        super.msg(); // invoking the msg() method of class A using super
+
+        b.msg(); // invoking the msg() method of class B
+
+    }
+
+    
+
+    public static void main(String args[]) {  
+
+        C obj = new C();  
+
+        obj.msg(); // Now both the msg() methods would be invoked.
+
+    }  
+
+}
