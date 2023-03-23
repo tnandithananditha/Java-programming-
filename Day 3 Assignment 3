@@ -1,0 +1,35 @@
+class MyThread extends Thread {
+
+    public void run() {
+
+        System.out.println("MyThread is running");
+
+    }
+
+}
+
+public class ThreadExample {
+
+    public static void main(String[] args) throws InterruptedException {
+
+        MyThread t1 = new MyThread();
+
+        t1.start();
+
+       
+
+        while (t1.isAlive()) {
+
+            System.out.println("t1 is still running...");
+
+            Thread.sleep(1000); 
+
+        }
+
+       
+
+        System.out.println("t1 has finished executing");
+
+    }
+
+}
