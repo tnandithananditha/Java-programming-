@@ -1,0 +1,45 @@
+import java.util.Arrays;
+
+public class MatrixEquality {
+
+    public static void main(String[] args) {
+
+        int[][] matrix1 = {{1, 2, 3}, {8, 4, 6}, {4, 5, 7}};
+
+        int[][] matrix2 = {{1, 2, 3}, {8, 4, 6}, {4, 5, 7}};
+
+        if (isEqual(matrix1, matrix2)) {
+
+            System.out.println("Matrices are equal.");
+
+        } else {
+
+            System.out.println("Matrices are not equal.");
+
+        }
+
+    }
+
+    public static boolean isEqual(int[][] matrix1, int[][] matrix2) {
+
+        if (matrix1.length != matrix2.length || matrix1[0].length != matrix2[0].length) {
+
+            return false;
+
+        }
+
+        for (int i = 0; i < matrix1.length; i++) {
+
+            if (!Arrays.equals(matrix1[i], matrix2[i])) {
+
+                return false;
+
+            }
+
+        }
+
+        return true;
+
+    }
+
+}
